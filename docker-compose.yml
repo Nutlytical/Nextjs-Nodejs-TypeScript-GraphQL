@@ -1,0 +1,29 @@
+version: '3.8'
+services:
+  nginx:
+    image: babara3940/mern-nginx:latest
+    restart: always
+    depends_on:
+      - frontend
+      - backend
+    ports:
+      - '80:80'
+
+  frontend:
+    image: babara3940/mern-frontend:latest
+    environment:
+      - CHOKIDAR_USEPOLLING=true
+
+  backend:
+    image: babara3940/mern-backend:latest
+    environment:
+      - PORT=${PORT}
+      - FRONTEND_URI=${FRONTEND_URI}
+      - DATABASE=${DATABASE}
+      - COOKIE_NAME=${COOKIE_NAME}
+      - COOKIE_SECRET=${COOKIE_SECRET}
+      - SENDGRID_API_KEY=${SENDGRID_API_KEY}
+      - FACEBOOK_CLIENT_ID=${FACEBOOK_CLIENT_ID}
+      - FACEBOOK_CLIENT_SECRET=${FACEBOOK_CLIENT_SECRET}
+      - GOOGLE_CLIENT_ID=${GOOGLE_CLIENT_ID}
+      - GOOGLE_CLIENT_SECRET=${GOOGLE_CLIENT_SECRET}
