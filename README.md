@@ -2,4 +2,5 @@
 
 ### [Live Site](http://betaauthenticate-env.eba-dmcm7ne6.ap-southeast-1.elasticbeanstalk.com/)
 
-"# Nextjs-Nodejs-TypeScript-GraphQL"
+"# for example ( use hard code )"
+"http://betaauthenticate-env.eba-dmcm7ne6.ap-southeast-1.elasticbeanstalk.com/"
